@@ -4,6 +4,7 @@ public class Personnage {
 	//Déclaration des variables de la classe
 	private int attaque,defense,pointsDeVie,initiative;
 	private String nom;
+	private Boolean isAlive;
 	
 	//setters and getters
 	public int getAttaque() {
@@ -36,6 +37,12 @@ public class Personnage {
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
+	public Boolean getIsAlive() {
+		return isAlive;
+	}
+	public void setIsAlive(Boolean isAlive) {
+		this.isAlive = isAlive;
+	}
 	
 	//Constructeurs
 	public Personnage(int attaque,int defense, int pointsDeVie,int initiative, String nom){
@@ -44,6 +51,15 @@ public class Personnage {
 		this.pointsDeVie=pointsDeVie;
 		this.initiative=initiative;
 		this.nom=nom;
+		this.isAlive=true;
+	}
+	
+	//méthodes
+	private void affichePersonnage() {
+		System.out.println(this.nom+"\n\tAttaque : "+this.attaque+"\n\tDefense : "+this.defense+
+				"\n\tPoints de vie : "+this.pointsDeVie+"\n\tInitiative : "+initiative+"\n\tStatut : ");
+		if (this.isAlive) System.out.print("Vivant");
+		else System.out.print("Mort");
 	}
 	
 }
