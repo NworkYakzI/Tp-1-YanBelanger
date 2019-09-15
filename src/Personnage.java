@@ -55,11 +55,18 @@ public class Personnage {
 	}
 	
 	//méthodes
-	private void affichePersonnage() {
-		System.out.println(this.nom+"\n\tAttaque : "+this.attaque+"\n\tDefense : "+this.defense+
+	public void affichePersonnage() {
+		System.out.print(this.nom+"\n\tAttaque : "+this.attaque+"\n\tDefense : "+this.defense+
 				"\n\tPoints de vie : "+this.pointsDeVie+"\n\tInitiative : "+initiative+"\n\tStatut : ");
-		if (this.isAlive) System.out.print("Vivant");
-		else System.out.print("Mort");
+		if (this.isAlive) System.out.println("Vivant\n");
+		else System.out.println("Mort\n");
+	}
+	
+	public int aleatoire(int max) {
+		int min=0;
+		int alea=min + (int)(Math.random() * ((max - min)+1));
+		return alea;
+		
 	}
 	
 }
