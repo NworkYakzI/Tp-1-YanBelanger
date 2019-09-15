@@ -84,6 +84,9 @@ public class Main {
 			tour+=1;
 			
 		} while (Bob.getIsAlive() && Igor.getIsAlive());//tant que les 2 sont en vie
+		
+		if (Bob.getIsAlive()) System.out.print("\n"+Bob.getNom()+" gagne le combat !!!");
+		if (Igor.getIsAlive()) System.out.print("\n"+Igor.getNom()+" gagne le combat !!!");
 
 	}
 
