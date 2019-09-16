@@ -9,7 +9,7 @@ public class JeuGladiateurs {
         CompteurDeTour tour = new CompteurDeTour();
         AffichageEcran affichage = new AffichageEcran();
         Personnage personnage1 = new Personnage("Bob le malchanceux",15,15,70,15); //L'initialisation du personnage doit se faire dans le constructeur
-        Personnage personnage2 = new Personnage("Igor l'empaleur",25,5,00,30); //L'initialisation du personnage doit se faire dans le constructeur
+        Personnage personnage2 = new Personnage("Igor l'empaleur",25,5,100,30); //L'initialisation du personnage doit se faire dans le constructeur
         
 
 		//affichage des statistiques
@@ -46,6 +46,9 @@ public class JeuGladiateurs {
 
 			//augmentation de 1 au nombre de tour
 			tour.augmenteTour();
+			
+			//afficher separateur de tour
+			affichage.afficherSeparateurDeTour();
 			
 		} while (personnage1.getIsAlive() && personnage2.getIsAlive());//tant que les 2 sont en vie
 		

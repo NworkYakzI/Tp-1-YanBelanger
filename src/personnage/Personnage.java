@@ -70,8 +70,8 @@ public class Personnage {
     public void afficherInfosPersonnage() {
     	System.out.print(this.nom+"\n\tAttaque : "+this.attaque+"\n\tDefense : "+this.defense+
 				"\n\tPoints de vie : "+this.pointsDeVie+"\n\tInitiative : "+initiative+"\n\tStatut : ");
-		if (this.isAlive) System.out.println("Vivant\n");
-		else System.out.println("Mort\n");
+		if (this.isAlive) System.out.println("Vivant");
+		else System.out.println("Mort");
     }
 
 	//Calcul de l'attaque

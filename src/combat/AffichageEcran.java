@@ -8,12 +8,12 @@ public class AffichageEcran {
 
     // -------------------------------------------------------------------------
     public void afficherSeparateurDeTour() {
-    	System.out.print("\n****************************************");
+    	System.out.print("\n****************************************\n");
     }
 
     // -------------------------------------------------------------------------
     public void afficherSeparateurInfosPerso() {
-    	System.out.print("\n-----------------\nINFOS PERSONNAGES\n-----------------");
+    	System.out.print("\n-----------------\nINFOS PERSONNAGES\n-----------------\n\n");
     }
 
     // -------------------------------------------------------------------------
