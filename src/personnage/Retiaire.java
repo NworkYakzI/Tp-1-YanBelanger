@@ -27,9 +27,9 @@ public class Retiaire extends Personnage{
 
 	
 	//methode
-	 public void afficherInfosPersonnage() {
+	 public void afficherInfos() {
 		 afficherInfosPersonnage();
-		 System.out.print("\nClasse : "+this.getCategorie());
+		 System.out.print("\tClasse : "+this.getCategorie()+"\n");
 	 }
 	 
 	public void attaquer(Personnage personnageCible) {
@@ -41,14 +41,14 @@ public class Retiaire extends Personnage{
 		//si filet dans les mains
 		if (this.isFiletMain()) {
 			
-			System.out.print("\n"+this.getNom()+"lance son filet");
+			System.out.print("\n"+this.getNom()+" lance son filet");
 			this.setFiletMain(false);
 			
 			//10% s'il attrape l'ennemie
 			if (alea<=10) {
 				personnageCible.setPointsDeVie(0);
 				
-				System.out.print("\n\nSon filet attrape "+personnageCible.getNom()+" et il l'empale sauvagement avec sa lance\n.");
+				System.out.print("\n\nSon filet attrape "+personnageCible.getNom()+" et il l'empale sauvagement avec sa lance.\n");
 				
 				personnageCible.setIsAlive(false);
 				
@@ -60,7 +60,7 @@ public class Retiaire extends Personnage{
 			
 		}
 		else {
-			
+			this.setFiletMain(true);
 			System.out.print("\n"+this.getNom()+" ramasse son filet et en profite pour attaquer.\n");
 			this.frapperPersonnage(personnageCible);
 		}

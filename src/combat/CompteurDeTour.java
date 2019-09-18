@@ -26,6 +26,6 @@ public class CompteurDeTour {
 
     //methode pour afficher le message du tour actuel
     public void afficheTour() {
-    	System.out.print("---------------\nTOUR ACTUEL: "+this.getNoTour()+"\n---------------\n");
+    	System.out.print("\n---------------\nTOUR ACTUEL: "+this.getNoTour()+"\n---------------\n");
     }
 }

@@ -2,6 +2,8 @@
 package combat;
 
 import personnage.Personnage;
+import personnage.Mirmillon;
+import personnage.Retiaire;
 
 
 public class AffichageEcran {
@@ -17,8 +19,8 @@ public class AffichageEcran {
     }
 
     // -------------------------------------------------------------------------
-    public void afficheVictoire(Personnage personnage1, Personnage personnage2) {
-    	if (personnage1.getIsAlive()) System.out.print("\n"+personnage1.getNom()+" le "+this.getClass()+" gagne le combat !!!");
-		if (personnage2.getIsAlive()) System.out.print("\n"+personnage2.getNom()+" le "+this.getClass()+" gagne le combat !!!");
+    public void afficheVictoire(Mirmillon personnage1, Retiaire personnage2) {
+    	if (personnage1.getIsAlive()) System.out.print("\n"+personnage1.getNom()+" le "+personnage1.getCategorie()+" gagne le combat !!!");
+		if (personnage2.getIsAlive()) System.out.print("\n"+personnage2.getNom()+" le "+personnage2.getCategorie()+" gagne le combat !!!");
     }
 }

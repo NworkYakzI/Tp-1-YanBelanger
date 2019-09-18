@@ -23,9 +23,9 @@ public class Mirmillon extends Personnage {
 	}
 	
 	//methode
-		 public void afficherInfosPersonnage() {
-			 afficherInfosPersonnage();
-			 System.out.print("\nClasse : "+this.getCategorie());
+		 public void afficherInfos() {
+			 this.afficherInfosPersonnage();
+			 System.out.print("\tClasse : "+this.getCategorie()+"\n\n");
 		 }
 		 
 		 public void attaquer(Personnage personnageCible) {
