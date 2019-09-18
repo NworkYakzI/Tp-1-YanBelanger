@@ -1,5 +1,7 @@
 
 import personnage.Personnage;
+import personnage.Mirmillon;
+import personnage.Retiaire;
 import combat.CompteurDeTour;
 import combat.AffichageEcran;
 
@@ -8,8 +10,8 @@ public class JeuGladiateurs {
     public static void main(String[] args) {
         CompteurDeTour tour = new CompteurDeTour();
         AffichageEcran affichage = new AffichageEcran();
-        Personnage personnage1 = new Personnage("Bob le malchanceux",15,15,70,15); //L'initialisation du personnage doit se faire dans le constructeur
-        Personnage personnage2 = new Personnage("Igor l'empaleur",25,5,100,30); //L'initialisation du personnage doit se faire dans le constructeur
+        Personnage personnage1 = new Mirmillon("Bob le malchanceux",15,15,70,15); //L'initialisation du personnage doit se faire dans le constructeur
+        Personnage personnage2 = new Retiaire("Igor l'empaleur",25,5,100,30); //L'initialisation du personnage doit se faire dans le constructeur
         
 
 		//affichage des statistiques
@@ -41,8 +43,8 @@ public class JeuGladiateurs {
 			personnage2.afficherInfosPersonnage();
 			
 			//modification des initiatives de chaques personnages
-			personnage1.setNewIniRandom();
-			personnage2.setNewIniRandom();
+			personnage1.setNewIniRandom(30);
+			personnage2.setNewIniRandom(100);
 
 			//augmentation de 1 au nombre de tour
 			tour.augmenteTour();

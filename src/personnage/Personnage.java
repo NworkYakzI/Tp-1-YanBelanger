@@ -102,9 +102,8 @@ public class Personnage {
     }
 
     // -------------------------------------------------------------------------
-    public void setNewIniRandom() {
+    public void setNewIniRandom(int max) {
     	int min=0;
-    	int max=100;
     	this.setInitiative(min + (int)(Math.random() * ((max - min)+1)));
     	
     }

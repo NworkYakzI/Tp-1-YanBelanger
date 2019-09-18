@@ -27,6 +27,11 @@ public class Retiaire extends Personnage{
 
 	
 	//methode
+	 public void afficherInfosPersonnage() {
+		 afficherInfosPersonnage();
+		 System.out.print("\nClasse : "+this.getCategorie());
+	 }
+	 
 	public void attaquer(Personnage personnageCible) {
 	
 		int min=0;

@@ -18,7 +18,7 @@ public class AffichageEcran {
 
     // -------------------------------------------------------------------------
     public void afficheVictoire(Personnage personnage1, Personnage personnage2) {
-    	if (personnage1.getIsAlive()) System.out.print("\n"+personnage1.getNom()+" gagne le combat !!!");
-		if (personnage2.getIsAlive()) System.out.print("\n"+personnage2.getNom()+" gagne le combat !!!");
+    	if (personnage1.getIsAlive()) System.out.print("\n"+personnage1.getNom()+" le "+this.getClass()+" gagne le combat !!!");
+		if (personnage2.getIsAlive()) System.out.print("\n"+personnage2.getNom()+" le "+this.getClass()+" gagne le combat !!!");
     }
 }
