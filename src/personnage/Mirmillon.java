@@ -38,7 +38,7 @@ public class Mirmillon extends Personnage {
 				 
 				 this.frapperPersonnage(personnageCible);
 			 }
-			 else {
+			 else {//Si le personnage attaquer meurt à la premiere attaque décapitation en 3 messages
 				//aléatoire pour afficher 3 messages différents
 				int min=1;
 				int max=3;

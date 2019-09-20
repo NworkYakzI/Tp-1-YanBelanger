@@ -26,13 +26,22 @@ public class JeuGladiateurs {
 			
 			tour.afficheTour();
 			
+			//boucle d'initiative de 0 à 100
 			for (int ini=0;ini<=100;ini++) {
+				
+				//si l'initiative est celle du premier personnage
 				if (ini==personnage1.getInitiative()) {
+					//personnage 1 attauqe le personnage 2
 					personnage1.attaquer(personnage2);
+					//si le personnage 2 est mort on arrete tout
 					if (!personnage2.getIsAlive())break;
 				}
+				
+				//Si l'initiative est celle du deuxieme personnage
 				if (ini==personnage2.getInitiative()) {
+					//le 2e personnage attauqe le premier
 					personnage2.attaquer(personnage1);
+					//si le premier personnage meurt on arrete tout
 					if (!personnage1.getIsAlive())break;
 				}
 				
@@ -54,6 +63,7 @@ public class JeuGladiateurs {
 			
 		} while (personnage1.getIsAlive() && personnage2.getIsAlive());//tant que les 2 sont en vie
 		
+		//afficher qui est le vainqueur
 		affichage.afficheVictoire(personnage1, personnage2);
         
         

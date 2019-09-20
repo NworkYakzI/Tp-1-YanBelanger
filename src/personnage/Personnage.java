@@ -91,10 +91,13 @@ public class Personnage {
     	
     	personnageCible.setPointsDeVie(personnageCible.getPointsDeVie()-degats);
     	
+    	//afficher les informations de l'attaque
     	System.out.print("\n"+this.getNom()+" attaque avec une puissance de : "+attaque+
 				"\n"+personnageCible.getNom()+" a une defense de : "+personnageCible.getDefense()+
 				"\nLes dommages sont donc de : "+degats+"\n");
     	
+    	
+    	//gestion de l'éta de vie du personnage attaqué
     	if (personnageCible.getPointsDeVie()<=0) {
     		personnageCible.setPointsDeVie(0);
     		personnageCible.setIsAlive(false);

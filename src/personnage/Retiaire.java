@@ -44,7 +44,7 @@ public class Retiaire extends Personnage{
 			System.out.print("\n"+this.getNom()+" lance son filet");
 			this.setFiletMain(false);
 			
-			//10% s'il attrape l'ennemie
+			//10% si il attrape l'ennemie
 			if (alea<=10) {
 				personnageCible.setPointsDeVie(0);
 				
@@ -53,13 +53,13 @@ public class Retiaire extends Personnage{
 				personnageCible.setIsAlive(false);
 				
 			}
-			else {
+			else { //si il n'attrape pas l'ennemie
 				
 				System.out.print("\n\nLe filet n'atteint pas sa cible.\n");
 			}
 			
 		}
-		else {
+		else {//sinon il rattrape son filet et attaque normalement
 			this.setFiletMain(true);
 			System.out.print("\n"+this.getNom()+" ramasse son filet et en profite pour attaquer.\n");
 			this.frapperPersonnage(personnageCible);
